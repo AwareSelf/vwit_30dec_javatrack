@@ -29,4 +29,9 @@ public class Employee {
         return this.empSal*12;
     }
 
+    public double computeAnnSal(double bonus)
+    {
+        return this.empSal*12+bonus;
+    }
+
 }
