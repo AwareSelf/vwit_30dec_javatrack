@@ -33,9 +33,16 @@ public class FileReadingIO2 {
         //IOException and FileNotFound exception need to be handled or declared
         //as they come under the category of checked exceptions (occur due to external situations)
 
-            FileReader fr = new FileReader(filename);
-            char ch = (char) fr.read();
-            System.out.println(ch);
+        FileReader fr=null;
+           try {
+               fr = new FileReader(filename);
+               char ch = (char) fr.read();
+               System.out.println(ch);
+           }
+           finally {
+               fr.close();
+           }
+
 
 
         System.out.println("remaining code of meth() method continues,,,");

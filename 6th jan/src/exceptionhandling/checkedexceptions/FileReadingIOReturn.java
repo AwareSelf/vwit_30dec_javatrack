@@ -3,7 +3,7 @@ package exceptionhandling.checkedexceptions;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileReadingIO {
+public class FileReadingIOReturn {
     public static void main(String[] args) {
         System.out.println("program starts..");
          meth("abc.java");
@@ -24,18 +24,25 @@ public class FileReadingIO {
         }
         catch(IOException e)
         {
+
            // e.printStackTrace();
             // System.out.println(e.getMessage());
             System.out.println("File abc.java does not exist, create the file");
+            if(filename.endsWith(".java"))
+                return;
         }
-
-        try
+      finally
         {
-            if(fr!=null)
-                fr.close();
-        }
-        catch(IOException e) {
-            e.printStackTrace();
+
+            System.out.println("finaly block is executed..");
+            try
+            {
+                if(fr!=null)
+                    fr.close();
+            }
+            catch(IOException e) {
+                e.printStackTrace();
+            }
         }
 
         System.out.println("remaining code of meth() method continues,,,");
