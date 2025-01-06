@@ -13,7 +13,10 @@ public class ArrayExceptionEx {
         System.out.println("inside meth method");
         //as ArrayIndexOfBoundsException is unchecked exception so compiler doesnt give
         //compiler error even if we don't add exception handling code below.
-        for(int i=0;i<=arr.length;i++)
+
+        //correct your code so that u no longer get index out of bounds exception
+     //   for(int i=0;i<=arr.length;i++)   //incorrect  coding - programmer's mistake
+        for(int i=0;i<arr.length;i++) //correct coding
         {
             System.out.println(arr[i]);
         }
