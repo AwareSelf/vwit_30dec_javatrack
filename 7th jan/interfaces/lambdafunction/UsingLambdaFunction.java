@@ -19,7 +19,12 @@ public class UsingLambdaFunction {
           */
         //impl1 of Addable functional interface
         Addable ref = (no1,no2)->no1+no2;
+        //calling abstract method on inteface ref
         double r = ref.add(10.5,10.5);
+
+        //call default method on functional interface ref
+        ref.meth();
+
         System.out.println(r);
         System.out.println(ref.add(5.5,6.5));
 
@@ -39,6 +44,10 @@ public class UsingLambdaFunction {
 
         //impl4 of Addable, passed to meth() method
         r = meth((a,b)->(2*a)+(2*b),5,6);
+        System.out.println(r);
+
+        //impl5 of Addable, passed to meth() method
+        r = meth((a,b)->(a*a*a)+(b*b*b),2,3);
         System.out.println(r);
 
     }
