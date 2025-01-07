@@ -16,6 +16,7 @@ public class InterfaceClient {
         meth(new Ball(4,"black"));
         meth(new Tyre());
 
+
     }
 
     public static void meth(Bounceable b)
@@ -24,5 +25,13 @@ public class InterfaceClient {
         b.setBounceFactor(5);
         b.bounce();
 
+        // instanceof operator checks dynamic/runtime type of b ref
+        //instanceof checks if b's runtime type is Ball
+        if(b instanceof Ball)
+        {
+            String c = ((Ball)b).getColor();
+            // System.out.println(((Ball)b).getColor());
+            System.out.println(c);
+        }
     }
 }
