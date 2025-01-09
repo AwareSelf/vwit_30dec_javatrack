@@ -1,23 +1,26 @@
-package classesobjects.inheritance;
+package classesobjects.containment;
 
 public class Employee implements Comparable<Employee>{
 
     private int empId;
      String empName;
     protected double empSal;
-    private int deptno;
+
+  //  one-to-one relationship
+    private Dept dept;
 
     public Employee() {
+
         System.out.println("Employee zero arg/no arg constructor called");
     }
 
 
-    public Employee(int empId, String empName, double empSal,int deptno) {
+    public Employee(int empId, String empName, double empSal, Dept dept) {
 
         this.empId = empId;
         this.empName = empName;
         this.empSal = empSal;
-        this.deptno = deptno;
+        this.dept = dept;
 
     }
 
@@ -43,12 +46,12 @@ public class Employee implements Comparable<Employee>{
         this.empSal = empSal;
     }
 
-    public int getDeptno() {
-        return deptno;
+    public Dept getDept() {
+        return dept;
     }
 
-    public void setDeptno(int deptno) {
-        this.deptno = deptno;
+    public void setDept(Dept dept) {
+        this.dept = dept;
     }
 
     public String displayEmp()
@@ -93,15 +96,15 @@ public class Employee implements Comparable<Employee>{
                 "empId=" + empId +
                 ", empName='" + empName + '\'' +
                 ", empSal=" + empSal +
-                ". deptno="+deptno+
+                ". dept="+dept+
                 '}';
     }
 
     @Override
     public int hashCode()
     {
-        System.out.println("hashCode method of emp called:hasCode="+this.deptno);
-        return this.deptno;
+        System.out.println("hashCode method of emp called:hasCode="+this.dept.getDeptno());
+        return this.dept.getDeptno();
     }
 
     //e1,e2,e3    (e1.compareTo(e2))- +ve return-value means e1>e2 -> swap e1 and e2

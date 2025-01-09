@@ -4,6 +4,8 @@ import classesobjects.inheritance.Employee;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListEx {
@@ -34,6 +36,11 @@ public class ArrayListEx {
         System.out.println(lst);
 
         System.out.println(lst.get(1));
+
+        System.out.println("after sorting employee list..");
+         Collections.sort(lst);
+        System.out.println(lst);
+      //  Collections.binarySearch(lst,new Employee(3,"Guddu",6000,10));
 
     }
 }
