@@ -1,0 +1,28 @@
+directly installing redis on windows instead of on docker:
+install wsl first on windows
+open cmd prompt : wsl --install
+https://learn.microsoft.com/en-us/windows/wsl/install
+
+post installation it will ask for username and password.(keep simple username and password)
+
+now install redis on Ubuntu linux distribution
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
+
+sudo apt-get install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
+
+it will install redis and start redis-server and ask username and password
+once server starts you will get $ prompt
+type redis-cli to connect to server
+$ redis-cli
+127.0.0.1:6379>PING
+PONG
+127.0.0.1:6379>
+
+if it doesnt start or says can't connect then give below command:
+sudo service redis-server start
+redis-cli
