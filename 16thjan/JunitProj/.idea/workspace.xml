@@ -15307,6 +15307,7 @@
       <change beforePath="$PROJECT_DIR$/../JunitBasicTest/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/.project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunitBasicTest/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunitBasicTest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/AccountClassParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/AccountClassParameterizedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/AccountClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/AccountClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/argumentconverter/ImplicitConversionEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/argumentconverter/ImplicitConversionEx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/argumentprovider/ArgumentsProviderEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunitBasicTest/src/test/java/junit/nama/junit/argumentprovider/StringArgumentsSourceEx.java" afterDir="false" />
@@ -17709,9 +17710,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2rh7HjIcNfjwuFBdXqHhCON7vaU" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -17722,53 +17723,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.UseStack.executor": "Run",
     "JUnit.AccountClassTest.executor": "Coverage",
     "JUnit.AccountClassTest.testWithdraw.executor": "Coverage",
     "JUnit.AccountTest.executor": "Run",
     "JUnit.AccountTest.testWithdraw.executor": "Run",
+    "JUnit.AccountTest.testWithdrawWithParams.executor": "Run",
+    "JUnit.DisabledClassTest.executor": "Run",
+    "JUnit.DisabledMethodTest.executor": "Run",
+    "JUnit.DisabledMethodTest.testCustomerServiceGet.executor": "Run",
+    "JUnit.TestExecutionOrderEx.executor": "Run",
+    "JUnit.org.example in JunitProj.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Namrata Work/Namrata25dec2024/githubrepo_hsbc/JavaTrainingPublic/vw_training/junit_import_project/JunitProj/src/test/java/othertests"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Namrata Work\Namrata25dec2024\githubrepo_hsbc\JavaTrainingPublic\vw_training\junit_import_project\JunitProj\src\test\java\othertests" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest">
-    <configuration name="AccountClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JunitProj" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AccountClassTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountClassTest.testWithdraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JunitProj" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AccountClassTest" />
-      <option name="METHOD_NAME" value="testWithdraw" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestExecutionOrderEx">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunitProj" />
       <extension name="coverage">
@@ -17784,7 +17765,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testWithdraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DisabledMethodTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunitProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="othertests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="othertests" />
+      <option name="MAIN_CLASS_NAME" value="othertests.DisabledMethodTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DisabledMethodTest.testCustomerServiceGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunitProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="othertests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="othertests" />
+      <option name="MAIN_CLASS_NAME" value="othertests.DisabledMethodTest" />
+      <option name="METHOD_NAME" value="testCustomerServiceGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestExecutionOrderEx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunitProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="othertests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="othertests" />
+      <option name="MAIN_CLASS_NAME" value="othertests.TestExecutionOrderEx" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example in JunitProj" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunitProj" />
       <extension name="coverage">
         <pattern>
@@ -17793,19 +17820,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AccountTest" />
-      <option name="METHOD_NAME" value="testWithdraw" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestExecutionOrderEx" />
+        <item itemvalue="JUnit.org.example in JunitProj" />
         <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.testWithdraw" />
-        <item itemvalue="JUnit.AccountClassTest" />
-        <item itemvalue="JUnit.AccountClassTest.testWithdraw" />
+        <item itemvalue="JUnit.DisabledMethodTest" />
+        <item itemvalue="JUnit.DisabledMethodTest.testCustomerServiceGet" />
       </list>
     </recent_temporary>
   </component>
