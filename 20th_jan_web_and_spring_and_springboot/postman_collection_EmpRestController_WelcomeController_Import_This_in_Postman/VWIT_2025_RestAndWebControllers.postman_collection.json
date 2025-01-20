@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "941f164e-599a-45e5-a549-eac68a5177e9",
+		"name": "VWIT_2025_RestAndWebControllers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17299048",
+		"_collection_link": "https://solar-robot-927862.postman.co/workspace/New-Team-Workspace~53183d9f-44d6-45b3-ae34-012bb3910ddc/collection/17299048-941f164e-599a-45e5-a549-eac68a5177e9?action=share&source=collection_link&creator=17299048"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/welcome/greet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/welcome/greet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"welcome",
+						"greet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/welcome/greet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/welcome/greet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"welcome",
+						"greet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/emp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employee/emp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"emp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/employee/emp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/emp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"emp"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 10:59:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"empNo\": 1,\n    \"empName\": \"Ram\",\n    \"empSal\": 3000\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/employee/emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empNo\": 1,\r\n    \"empName\": \"Ram\",\r\n    \"empSal\": 3000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/emp/2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"emp",
+						"2000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/employee/emp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empNo\": 1,\r\n    \"empName\": \"Ram\",\r\n    \"empSal\": 3000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/emp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"emp"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 11:11:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"empNo\": 1,\n    \"empName\": \"Ram\",\n    \"empSal\": 4000\n}"
+				},
+				{
+					"name": "http://localhost:8080/employee/emp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empNo\": 1,\r\n    \"empName\": \"Ram\",\r\n    \"empSal\": 3000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/emp/2000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"emp",
+								"2000"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 11:29:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"empNo\": 1,\n    \"empName\": \"Ram\",\n    \"empSal\": 5000\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/employee/emp/incrbonus/11/1000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employee/emp/incrbonus/11/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"emp",
+						"incrbonus",
+						"11",
+						"1000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/employee/emp/incrbonus/11/1000",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/emp/incrbonus/11/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"emp",
+								"incrbonus",
+								"11",
+								"1000"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 11:47:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"empNo\": 11,\n    \"empName\": \"Shyam\",\n    \"empSal\": 7000\n}"
+				}
+			]
+		}
+	]
+}
