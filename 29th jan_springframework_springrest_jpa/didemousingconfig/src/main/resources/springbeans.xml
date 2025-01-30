@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+
+
+     <bean id="accountbean" class="nama.springframework.didemo.components.Account">
+        <property name="acctId"  value="10">
+        </property>
+        <property name="acctName"  value="namrata"></property>
+        <property name="acctBal"  value="7000"></property>
+     </bean>
+    <bean id="accountbean1" class="nama.springframework.didemo.components.Account">
+        <property name="acctId"  value="11">
+        </property>
+        <property name="acctName"  value="arjun"></property>
+        <property name="acctBal"  value="3000"></property>
+    </bean>
+
+
+     <bean id="empbean" class="nama.springframework.didemo.components.Employee">
+        <property name="empId"  value="1">
+        </property>
+        <property name="empName"  value="namrata"></property>
+         <property name="empSal"  value="50000"></property>
+        <property name="empAcct"  ref="accountbean"></property>
+     </bean>
+
+
+</beans>
