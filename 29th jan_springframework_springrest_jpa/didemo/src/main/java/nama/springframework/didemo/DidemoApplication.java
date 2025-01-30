@@ -22,18 +22,18 @@ public class DidemoApplication {
 		//2) annotations - bean configuration using annotations - AnnotationConfigApplicationContext container
 
 		//Using ApplicationContext Spring container
-		/*
-		   AbstractApplicationContext ac = new ClassPathXmlApplicationContext("employees.xml");
-             Account ob = (Account)ac.getBean("account");
+
+		   AbstractApplicationContext ac = new ClassPathXmlApplicationContext("springbeans.xml");
+             Account ob = (Account)ac.getBean("accountbean");
 		     System.out.println(ob.getAcctBal());
-			 */
+
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.scan("nama.springframework.didemo");
 		context.refresh();
-	//	Account ob = (Account)context.getBean("account");
-		Account ob = (Account)context.getBean("accbean");
-		System.out.println(ob.getAcctBal());
+	//	Account ob1 = (Account)context.getBean("account");
+		Account ob1 = (Account)context.getBean("accbean");
+		System.out.println(ob1.getAcctBal());
 		System.out.println(ob);
 
 
