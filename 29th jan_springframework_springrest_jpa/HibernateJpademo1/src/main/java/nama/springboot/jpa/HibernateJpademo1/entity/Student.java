@@ -3,45 +3,39 @@ package nama.springboot.jpa.HibernateJpademo1.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Emp")
-public class Employee {
+@Table(name="Stud")
+public class Student {
 
     @Id
     @GeneratedValue
-    Long id;
+    Long studid;
 
-    @Column(name="empname")
+    @Column(name="studname")
     String name;
 
-    double salary;
+
+    int totalMarks;
 
     //default fetch type strategy for any relation is FetchType.EAGER
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "p_id")
     Passport empPass;
 
-    public Employee() {
+    public Student() {
     }
 
-    public Employee(String name, double salary) {
+    public Student(String name, int totalMarks) {
 
         this.name = name;
-        this.salary = salary;
+        this.totalMarks = totalMarks;
     }
 
-    public Employee(String name, double salary, Passport empPass) {
+    public Student(String name, int totalMarks, Passport empPass) {
         this.name = name;
-        this.salary = salary;
+        this.totalMarks=totalMarks;
         this.empPass = empPass;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -51,12 +45,20 @@ public class Employee {
         this.name = name;
     }
 
-    public double getSalary() {
-        return salary;
+    public Long getStudid() {
+        return studid;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setStudid(Long studid) {
+        this.studid = studid;
+    }
+
+    public int getTotalMarks() {
+        return totalMarks;
+    }
+
+    public void setTotalMarks(int totalMarks) {
+        this.totalMarks = totalMarks;
     }
 
     public Passport getEmpPass() {
@@ -69,10 +71,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
+        return "Student{" +
+                "studid=" + studid +
                 ", name='" + name + '\'' +
-                ", salary=" + salary +
+                ", totalMarks=" + totalMarks +
                 ", empPass=" + empPass +
                 '}';
     }
