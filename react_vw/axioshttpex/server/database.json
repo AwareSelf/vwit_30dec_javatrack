@@ -1,0 +1,14 @@
+{
+  "books": [
+    {
+      "bkname": "Reactt",
+      "bkprice": 3000,
+      "id": 1
+    },
+    {
+      "id": "2",
+      "bkname": "react",
+      "bkprice": 1200
+    }
+  ]
+}
