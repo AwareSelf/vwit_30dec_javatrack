@@ -1,0 +1,30 @@
+<p>studrestclient works!</p>
+<p>max students allowed:{{max_stud_allowed}}</p>
+
+<div>
+  <input type="button" (click)="getAllStudents()" value="List students" />
+</div>
+
+@if(studarr.length>0)
+{
+<table>
+<thead>
+  <tr><th>studentid</th><th>studname</th><th>studentTotalMarks</th></tr>
+</thead>
+<tbody>
+
+  @for (st of studarr; track st.studid) {
+  <tr>
+     <td>{{ st.studid }}</td>
+     <td>{{st.name}}</td>
+     <td>{{st.totalMarks}}</td>
+     <td><input type="button" (click)="deleteStudent(st.studid)"  value="delete" /></td>
+     <td><input type="button" (click)="updateStudent(st)" value="update" /></td>
+  </tr>
+  }
+</tbody>
+</table>
+}
+@else {
+  <p>Currently, There are no students in class!</p>
+}

@@ -1,0 +1,66 @@
+<p>studentregister works!</p>
+
+<form (ngSubmit)="addstud($event)" #registerForm="ngForm" novalidate>
+
+  <input type="text"
+         [(ngModel)]="stud.name"
+         name="studname"
+         placeholder="student name"
+         #name = "ngModel"
+         required
+        pattern="^[a-zA-Z]*$"
+
+  /> <br/>
+  <span class="valerror">
+    @if((name.touched || registerForm.submitted)&&(name.errors?.['required']))
+    {
+         Name is required!
+    }
+  </span> <br/>
+  <span class="valerror">
+    @if((name.touched || registerForm.submitted)&&(name.errors?.['pattern']))
+    {
+         Name can't contain numbers or wild chars!
+    }
+  </span>
+<br/>
+  <input type="text"
+         [(ngModel)]="stud.totalMarks"
+         name="studtotalmarks"
+         placeholder="student total marks"
+         #totalmarks="ngModel"
+         required />
+   <br/>
+   <span class="valerror">
+          @if((totalmarks.touched || registerForm.submitted)&&(totalmarks.errors?.['required']))
+          {
+              Total Marks is required!
+          }
+   </span>
+
+  <br/>
+  <input type="submit" [disabled]="!registerForm.valid"value="add student" />
+</form>
+@if(isRegistered)
+{
+  <h3>Student registered successfully!</h3>
+}
+<hr/>
+<div>
+ {{ (name.touched || registerForm.submitted)&&(name.errors?.['required'])}}
+  <p> name field is valid:{{name.valid}}</p>
+  <p> totalMarks field is valid:{{totalmarks.valid}}</p>
+  <p> Form is valid:{{registerForm.valid}}</p>
+
+  <p> name field is dirty:{{name.dirty}}</p>
+  <p> name field is pristine:{{name.pristine}}</p>
+  <p> name field is touched:{{name.touched}}</p>
+  <p> name field value:{{name.value}}</p>
+
+  <p> totalmarks field value:{{totalmarks.value}}</p>
+  <p> totalmarks field pristine:{{totalmarks.pristine}}</p>
+  <p>totalmarks field is it dirty:{{totalmarks.dirty}}</p>
+
+  <hr/>
+  <p>Entire form value in json:{{registerForm.value|json}}</p>
+</div>
