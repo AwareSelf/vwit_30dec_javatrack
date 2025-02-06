@@ -2,9 +2,18 @@
 <p>max students allowed:{{max_stud_allowed}}</p>
 
 <div>
-  <input type="button" (click)="getAllStudents()" value="List students" />
+  <input type="button" (click)="getAllStudents()" value="list students" />
 </div>
 
+
+@if(flag===true)
+{
+  <input type="text" [(ngModel)]="updateStud.studid" readOnly disabled="true"/>
+  <input type="text" [(ngModel)]="updateStud.name"  />
+  <input type="text" [(ngModel)]="updateStud.totalMarks"  />
+  <input type="button" (click)="updateStudent()" value="update" />
+
+}
 @if(studarr.length>0)
 {
 <table>
@@ -19,7 +28,7 @@
      <td>{{st.name}}</td>
      <td>{{st.totalMarks}}</td>
      <td><input type="button" (click)="deleteStudent(st.studid)"  value="delete" /></td>
-     <td><input type="button" (click)="updateStudent(st)" value="update" /></td>
+     <td><input type="button" (click)="editStudent(st)" value="edit" /></td>
   </tr>
   }
 </tbody>
