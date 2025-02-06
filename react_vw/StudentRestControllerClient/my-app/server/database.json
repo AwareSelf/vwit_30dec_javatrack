@@ -1,0 +1,14 @@
+{
+  "books": [
+    {
+      "bkname": "React123",
+      "bkprice": 3000,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "bkname": "Angular",
+      "bkprice": 3000
+    }
+  ]
+}
