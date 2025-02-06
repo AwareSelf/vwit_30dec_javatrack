@@ -1,0 +1,62 @@
+
+                  call hierarcy -> from browser to web server to database
+
+                1  browser/postman (client)-->
+                2  spring boot rest controller --->
+                3  spring boot service layer calls -->
+                4  spring boot data jpa repo calls -->
+                5  spring boot with jpa calls -->
+                6  jpa Apis calls -->
+                7  hibernate lib method calls (it has actual impl of JPA api interfaces) -->
+                8  jdbc layer actual query fired -->
+                9  database
+
+                layers 1 - postman or browser so its visible
+                layer 2,3,4 are visible to you because you have coded it -> logging --> see its working
+                layer 5,6,7,8 are not visible as part of internal working of data-jpa, and jpa's hibernate impl
+                                 but you can check queries fired on console using show_sql configuration
+                layer 9 database - visible you can go and check in database
+
+
+
+                Hibernate ---> ORM persistence management --> Hibernate container --> persistence mgmt
+                First-leve-cache
+
+                POJO p1 -> repo.save(p1)--> Entity p1 --> added db and first level cache.
+
+                Working of first level cache /hibernate persistence mgmt works
+                whatever changed you make to entity within transaction boundaries are tracked by
+                hibernate by making those changed only on the entity stored in first level cache.
+                Only when the persistence transaction ends, at that time hibernate will synch the
+                dirsty entity (having all changes) with the database at one go.
+                Thus synching object and it's record in datbase is done efficiently using first level
+                cache mechanism at proper end/touch points like transaction boundary points.
+                If you try to make changes to pojo outside transaction -> its like making
+                chnages to non-managed entity -> means entity that's not being currently tracked by
+                hibernate persistence mechanism for relevant changes->so ur changes will be lost
+                --> so always make changes within transaction boundaries else
+                you will have to merge the entity changes when transaction starts.
+                managed entity vs non-managed entity
+                managed entity - entity who is in first level and cache and whos changes are currently
+                                 being tracked (keeping the record) by persistence system and will be
+                                 synched with db at the end of transaction boundary
+
+
+                Hibernate First level cache mechanism:
+                Hibernate's first level cache is a built-in caching mechanism that stores data in the session object's memory. It's also known as the session cache.
+                How it works
+                When a session is created, a session cache is associated with it.
+                When an object is loaded from the database, a copy of it is stored in the cache.
+                If the same object is requested again in the same session, Hibernate returns the cached copy.
+                If the same data is requested in a different session, Hibernate fires a query to load the data.
+                The cache is automatically cleared when the session is closed.
+                Benefits
+                Improves application performance by reducing the number of database queries
+                Avoids additional database round trips
+                Reduces the number of hits when multiple update statements are ordered using the session cache
+                How to manage it
+                Hibernate manages the first-level cache automatically, so there's no need to configure it manually.
+                To remove a single object, use the session evict() method.
+                To clear the cache, use the session clear() method.
+
+
