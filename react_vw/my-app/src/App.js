@@ -7,6 +7,11 @@ import MyArr from './MyArr';
 import MyBookArr from './MyBookArr';
 import MyFavColor1 from './MyFavColor1';
 import BookInput from './BookInput';
+import Timer from './Timer';
+import BookAxiosCrud from './BookAxiosCrud';
+import StudentRestClient from './StudentRestClient';
+import DataSharing from './DataSharing';
+import ShoppingApp from './ShoppingApp';
 
 function App() {
 
@@ -29,9 +34,20 @@ function App() {
          <hr/>
          <MyFavColor1 initcolor="red" bkgcolor="black" />
          <hr/>
-         */}
          <BookInput/>
          <hr/>
+         <Timer/>
+         <hr/>
+       
+         <BookAxiosCrud/>
+         <hr/>
+         <StudentRestClient/>
+           
+          <hr/>
+          <DataSharing/> 
+          */}
+          <hr/>
+          <ShoppingApp/>
     </div>
   );
 }
