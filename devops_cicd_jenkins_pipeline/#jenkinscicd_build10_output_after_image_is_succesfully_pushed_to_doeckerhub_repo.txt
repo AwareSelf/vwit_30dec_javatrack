@@ -1,0 +1,775 @@
+Started by user Namrata Marathe
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build Maven)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/namrata1681/devops-integration # timeout=10
+Fetching upstream changes from https://github.com/namrata1681/devops-integration
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.37.2.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/namrata1681/devops-integration +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 88b88741cdd01d4a5ae07c5ba4ccdc70f4f05c5b (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 88b88741cdd01d4a5ae07c5ba4ccdc70f4f05c5b # timeout=10
+Commit message: "init commit"
+ > git.exe rev-list --no-walk 88b88741cdd01d4a5ae07c5ba4ccdc70f4f05c5b # timeout=10
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation>mvn clean package 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< nama.springboot:devops-automation-demo >---------------
+[INFO] Building devops-automation-demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ devops-automation-demo ---
+[INFO] Deleting C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ devops-automation-demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ devops-automation-demo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ devops-automation-demo ---
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ devops-automation-demo ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ devops-automation-demo ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running nama.springboot.devops_automation_demo.DevopsAutomationDemoApplicationTests
+17:07:57.252 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [nama.springboot.devops_automation_demo.DevopsAutomationDemoApplicationTests]: DevopsAutomationDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:07:57.705 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration nama.springboot.devops_automation_demo.DevopsAutomationDemoApplication for test class nama.springboot.devops_automation_demo.DevopsAutomationDemoApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2025-02-25T17:07:59.850+05:30  INFO 43896 --- [devops-automation-demo] [           main] s.d.DevopsAutomationDemoApplicationTests : Starting DevopsAutomationDemoApplicationTests using Java 17.0.6 with PID 43896 (started by LAPTOP-TUFA7D86$ in C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation)
+2025-02-25T17:07:59.852+05:30  INFO 43896 --- [devops-automation-demo] [           main] s.d.DevopsAutomationDemoApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-02-25T17:08:08.708+05:30  INFO 43896 --- [devops-automation-demo] [           main] s.d.DevopsAutomationDemoApplicationTests : Started DevopsAutomationDemoApplicationTests in 10.491 seconds (process running for 12.657)
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.73 s -- in nama.springboot.devops_automation_demo.DevopsAutomationDemoApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ devops-automation-demo ---
+[INFO] Building jar: C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation\target\devops-integration.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.3:repackage (repackage) @ devops-automation-demo ---
+[INFO] Replacing main artifact C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation\target\devops-integration.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation\target\devops-integration.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  49.803 s
+[INFO] Finished at: 2025-02-25T17:08:35+05:30
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build Docker Image)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation>cd /d C:\volkwagen\devops_cicd\devops-automation-demo 
+
+C:\volkwagen\devops_cicd\devops-automation-demo>docker build -t devops-integration -f Dockerfile . 
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.6s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 180B 0.7s done
+#1 DONE 1.5s
+
+#2 [internal] load metadata for docker.io/library/openjdk:8
+#2 DONE 9.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.2s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/2] FROM docker.io/library/openjdk:8@sha256:86e863cc57215cfb181bd319736d0baf625fe8f150577f9eb58bd937f5452cb8
+#5 resolve docker.io/library/openjdk:8@sha256:86e863cc57215cfb181bd319736d0baf625fe8f150577f9eb58bd937f5452cb8
+#5 ...
+
+#4 [internal] load build context
+#4 transferring context: 79B 0.0s done
+#4 DONE 0.8s
+
+#5 [1/2] FROM docker.io/library/openjdk:8@sha256:86e863cc57215cfb181bd319736d0baf625fe8f150577f9eb58bd937f5452cb8
+#5 resolve docker.io/library/openjdk:8@sha256:86e863cc57215cfb181bd319736d0baf625fe8f150577f9eb58bd937f5452cb8 0.4s done
+#5 DONE 1.1s
+
+#6 [2/2] COPY target/devops-integration.jar devops-integration.jar
+#6 CACHED
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 exporting manifest sha256:a0fa9a15531500487400e03878b4ff5a710a13a54b5a5fb9d562ac42d567fd5c done
+#7 exporting config sha256:b9020906cf4254d2c5c8bdf2d3f4718e71836b56d2f257149f3f7771031df808 done
+#7 exporting attestation manifest sha256:1c4ec2e1fa5dc9636e634b781beee854a92ebfbbc670770dcba5735cc9c22a65
+#7 exporting attestation manifest sha256:1c4ec2e1fa5dc9636e634b781beee854a92ebfbbc670770dcba5735cc9c22a65 3.2s done
+#7 exporting manifest list sha256:8929db398c79800844728e6e4871829d716eddf714601ebd87af5e2e63c2e9ca
+#7 exporting manifest list sha256:8929db398c79800844728e6e4871829d716eddf714601ebd87af5e2e63c2e9ca 2.1s done
+#7 naming to docker.io/library/devops-integration:latest
+#7 naming to docker.io/library/devops-integration:latest 0.2s done
+#7 unpacking to docker.io/library/devops-integration:latest
+#7 unpacking to docker.io/library/devops-integration:latest 0.8s done
+#7 DONE 8.5s
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - ConsistentInstructionCasing: Command 'From' should match the case of the command majority (uppercase) (line 1)
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push Image to Hub)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation>docker login -u namrata16 -p Syndrome@16 
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+Login Succeeded
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation>docker tag devops-integration:latest namrata16/devops-integration:latest 
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\devops-automation>docker push namrata16/devops-integration:latest 
+The push refers to repository [docker.io/namrata16/devops-integration]
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d129f3a19dae: Waiting
+d129f3a19dae: Waiting
+2068746827ec: Waiting
+001c52e26ad5: Waiting
+6057b64e9b10: Waiting
+d85151f15b66: Waiting
+9daef329d350: Waiting
+52a8c426d30b: Waiting
+8754a66e0050: Waiting
+d9d4b9b6e964: Waiting
+d85151f15b66: Waiting
+8754a66e0050: Waiting
+6057b64e9b10: Waiting
+001c52e26ad5: Waiting
+52a8c426d30b: Pushed
+6057b64e9b10: Pushed
+d85151f15b66: Pushed
+2068746827ec: Pushed
+d9d4b9b6e964: Pushed
+d129f3a19dae: Pushed
+9daef329d350: Pushed
+001c52e26ad5: Pushed
+8754a66e0050: Pushed
+latest: digest: sha256:8929db398c79800844728e6e4871829d716eddf714601ebd87af5e2e63c2e9ca size: 856
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

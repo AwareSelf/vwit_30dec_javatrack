@@ -1,0 +1,44 @@
+Make below changes to pipeline script before using it!!
+•	Change maven version under tools-maven to maven version installed on your machine.
+•	Change branch name on line no 22 to either main or master depending on branch name of your github repo
+•	Change githun repo url name to your github repo url in pt no 22:userRemoteConfigs
+•	On line no 30 under stage build docker image, give the location of your project folder on hard disk (where jar file is created in its target folder), don’t copy path till target just till project folder on ur harddisk
+•	Under stage ‘push image to hub’, line no 39 hard code your docker hub id and password
+•	Under stage ‘push image to hub’ line no 40 tag your docker jar image name with correct dockerhub id /image name:version
+•	Under stage ‘push image to hub’ line no 41 push the tagged image with dockerhub id and version to docker hub
+
+
+14)	pipeline {
+15)	    agent any
+16)	    tools {
+17)	        maven 'maven_3_9_4' 
+18)	    }
+19)	    stages {
+20)	        stage('Build Maven') {
+21)	            steps {
+22)	                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/namrata1681/devops-integration']]) 
+23)	                bat 'mvn clean package'
+24)	            }
+25)	        }
+26)	        stage('Build Docker Image') {
+27)	            steps {
+28)	                script {
+29)	                    bat '''
+30)	                    cd /d C:\\volkwagen\\devops_cicd\devops-automation-demo
+31)	                    docker build -t devops-integration -f Dockerfile .
+32)	                    '''
+33)	                }
+34)	            }
+35)	        }
+36)	        stage('Push Image to Hub'){
+37)	            steps{
+38)	                script{
+                
+39)	                    bat "docker login -u namrata16 -p stranger@16" 
+40)	                    bat "docker tag devops-integration:latest namrata16/devops-integration:latest"
+41)	                    bat 'docker push namrata16/devops-integration:latest'
+42)	                }
+43)	            }
+44)	        }
+45)	    }
+46)	}
