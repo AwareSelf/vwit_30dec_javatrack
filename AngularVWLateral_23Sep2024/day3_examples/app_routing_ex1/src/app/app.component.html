@@ -1,0 +1,19 @@
+<div>
+  <h3>Angular Routing Example</h3>
+
+  <hr/>
+  <ul>
+    <li>
+      <a routerLink="/registerbook" routerLinkActive="active">Register Book</a>
+    </li>
+    <li>
+      <a routerLink="/listbooks" routerLinkActive="active">List Books</a>
+    </li>
+   
+  </ul>
+</div>
+<hr/>
+<input type="text" value="2" placeholder="enter bookid to search book" #search />
+<button type="button" (click)="navSearch(+search.value)">SearchBook</button>
+<hr/>
+<router-outlet></router-outlet>
