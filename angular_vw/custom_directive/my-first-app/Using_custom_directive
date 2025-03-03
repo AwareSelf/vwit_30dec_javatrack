@@ -1,0 +1,8 @@
+do npm install first to dynamically load all libraries.
+both directives are used in app.component.html
+1) appHighlight custom directive
+  --changes style.background property of host html/custom element using appHighlight custom
+  directive. It also listens to dom events click,mouse over and mouse out
+2) appChangeColor custom directive
+ --changes style.fontSize and value propert of host input element using the appChangeColor custome
+      directive. it also listesns to mouseover event to change the value and fontsize dom properties.
